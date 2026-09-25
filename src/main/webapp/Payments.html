@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SkyBook - Payment</title>
+
+    <link rel="stylesheet" href="design.css">
+
+</head>
+
+
+<body>
+
+    <header class="skybook-header">
+
+        <img
+            src="skybook-logo-small.png"
+            alt="SkyBook"
+            class="skybook-logo">
+
+
+        <!-- Payment and flight themed header decoration -->
+
+        <div
+            class="skybook-header-decoration"
+            aria-hidden="true">
+
+            <span class="header-dots"></span>
+
+            <span class="header-card"></span>
+
+            <span class="header-card-two"></span>
+
+            <span class="header-qr"></span>
+
+            <span class="header-rupee">₹</span>
+
+            <span class="header-wallet"></span>
+
+            <span class="header-contactless">)))</span>
+
+            <span class="header-ticket"></span>
+
+            <span class="header-pass"></span>
+
+            <span class="header-check">✓</span>
+
+            <span class="header-route"></span>
+
+            <span class="header-route-dot"></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Background decoration for the payment page -->
+
+    <div
+        class="skybook-page-decoration payment-page-decoration"
+        aria-hidden="true">
+
+        <div class="skybook-decoration-card"></div>
+
+        <div class="skybook-decoration-card-two"></div>
+
+        <div class="skybook-decoration-qr"></div>
+
+        <div class="skybook-decoration-rupee">
+            ₹
+        </div>
+
+        <div class="skybook-decoration-check">
+            ✓
+        </div>
+
+        <div class="skybook-decoration-pass"></div>
+
+        <div class="skybook-decoration-wallet"></div>
+
+        <div class="skybook-decoration-contactless"></div>
+
+        <div class="skybook-decoration-chip"></div>
+
+        <div class="skybook-decoration-dots"></div>
+
+    </div>
+
+
+    <main class="payment-container">
+
+        <section class="top-row">
+
+            <div class="tile offers-tile">
+
+                <h2>Offers & Discounts</h2>
+
+
+                <div class="offer-item">
+
+                    <h3>Debit Card</h3>
+
+                    <p>15% OFF</p>
+
+                </div>
+
+
+                <div class="offer-item">
+
+                    <h3>Credit Card</h3>
+
+                    <p>10% OFF</p>
+
+                </div>
+
+
+                <div class="offer-item">
+
+                    <h3>UPI</h3>
+
+                    <p>15% OFF</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tile booking-summary-tile">
+
+                <h2>Booking Summary</h2>
+
+
+                <div class="booking-details">
+
+                    <div class="detail-item">
+
+                        <span>From</span>
+
+                        <strong id="bookingFrom">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>To</span>
+
+                        <strong id="bookingTo">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Flight</span>
+
+                        <strong id="bookingFlight">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Departure</span>
+
+                        <strong id="bookingDeparture">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Passengers</span>
+
+                        <strong id="bookingPassengers">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Seats</span>
+
+                        <strong id="bookingSeats">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Airline</span>
+
+                        <strong id="bookingAirline">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>Fare</span>
+
+                        <strong id="bookingFare">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="bottom-row">
+
+            <div class="tile payment-options-tile">
+
+                <h2>Payment Options</h2>
+
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        id="debit-card"
+                        name="payment-method"
+                        value="debit-card">
+
+                    <label for="debit-card">
+                        Debit Card
+                    </label>
+
+                </div>
+
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        id="credit-card"
+                        name="payment-method"
+                        value="credit-card">
+
+                    <label for="credit-card">
+                        Credit Card
+                    </label>
+
+                </div>
+
+
+                <div class="payment-option">
+
+                    <input
+                        type="radio"
+                        id="upi"
+                        name="payment-method"
+                        value="upi">
+
+                    <label for="upi">
+                        UPI
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="tile payment-form-tile">
+
+                <div class="payment-placeholder">
+
+                    <h2>Select Payment Method</h2>
+
+                    <p>
+                        Choose Debit Card, Credit Card or UPI
+                        to continue.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div class="loading-overlay">
+
+        <div class="loading-tile">
+
+            <div class="airplane-loader">
+                ✈
+            </div>
+
+            <h2>Processing Payment...</h2>
+
+            <p>Please wait</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="payment.js"></script>
+
+</body>
+
+</html>

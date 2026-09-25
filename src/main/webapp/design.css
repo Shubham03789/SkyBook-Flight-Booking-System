@@ -1,0 +1,2080 @@
+/* SkyBook global styles */
+
+:root {
+    --primary-color: #2563EB;
+    --secondary-color: #93C5FD;
+    --background-color: #FFFFFF;
+    --text-color: #172033;
+    --muted-text: #5F6B7A;
+    --white: #FFFFFF;
+    --border-color: #D9E2F2;
+    --shadow-color: rgba(37, 99, 235, 0.18);
+    --success-color: #166534;
+}
+
+
+/* Basic reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+
+    background:
+        linear-gradient(
+            135deg,
+            #EEF5FF 0%,
+            #EAF3FF 55%,
+            #E4EFFF 100%
+        );
+}
+
+
+/* Header */
+
+.skybook-header {
+    position: relative;
+
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 40px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            105deg,
+            #1748B8 0%,
+            var(--primary-color) 50%,
+            #1688F5 100%
+        );
+
+    box-shadow:
+        0 7px 25px
+        rgba(28, 82, 190, 0.20);
+
+    z-index: 10;
+}
+
+
+.skybook-header > .skybook-logo {
+    position: relative;
+    z-index: 3;
+
+    width: 250px;
+    height: auto;
+    max-width: 500px;
+
+    display: block;
+    flex-shrink: 0;
+}
+
+
+/* Header decoration */
+
+.skybook-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 220px;
+
+    left: 30%;
+    top: -170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 255, 255, 0.18),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+.skybook-header-decoration {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* Header payment card */
+
+.header-card {
+    position: absolute;
+
+    left: 38%;
+    top: 18px;
+
+    width: 92px;
+    height: 55px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.30);
+
+    border-radius: 8px;
+
+    transform: rotate(-7deg);
+}
+
+
+.header-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 17px;
+
+    width: 100%;
+
+    border-top:
+        2px solid
+        rgba(255, 255, 255, 0.22);
+}
+
+
+.header-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    bottom: 9px;
+
+    width: 18px;
+    height: 7px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+    border-radius: 2px;
+}
+
+
+/* Second header card */
+
+.header-card-two {
+    position: absolute;
+
+    left: 48%;
+    top: 27px;
+
+    width: 70px;
+    height: 42px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.24);
+
+    border-radius: 7px;
+
+    transform: rotate(8deg);
+}
+
+
+/* Header rupee */
+
+.header-rupee {
+    position: absolute;
+
+    left: 55%;
+    top: 20px;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.30);
+
+    border-radius: 50%;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* Header QR pattern */
+
+.header-qr {
+    position: absolute;
+
+    left: 62%;
+    top: 18px;
+
+    width: 52px;
+    height: 52px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.32) 2px,
+            transparent 2px
+        ),
+        linear-gradient(
+            rgba(255, 255, 255, 0.32) 2px,
+            transparent 2px
+        );
+
+    background-size: 9px 9px;
+    opacity: 0.55;
+}
+
+
+/* Header contactless symbol */
+
+.header-contactless {
+    position: absolute;
+
+    left: 69%;
+    top: 26px;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 22px;
+    letter-spacing: -5px;
+
+    transform: rotate(-90deg);
+}
+
+
+/* Header chip */
+
+.header-chip {
+    position: absolute;
+
+    left: 75%;
+    top: 25px;
+
+    width: 30px;
+    height: 23px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.28);
+
+    border-radius: 5px;
+}
+
+
+.header-chip::before {
+    content: "";
+
+    position: absolute;
+
+    left: 6px;
+    top: 5px;
+
+    width: 14px;
+    height: 9px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.26);
+
+    border-radius: 2px;
+}
+
+
+/* Header boarding pass */
+
+.header-pass {
+    position: absolute;
+
+    left: 81%;
+    top: 15px;
+
+    width: 100px;
+    height: 53px;
+
+    border:
+        2px dashed
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 7px;
+
+    transform: rotate(-4deg);
+}
+
+
+.header-pass::before {
+    content: "BOARDING";
+
+    position: absolute;
+
+    left: 10px;
+    top: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.34);
+
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+
+.header-pass::after {
+    content: "";
+
+    position: absolute;
+
+    right: 8px;
+    bottom: 8px;
+
+    width: 30px;
+    height: 20px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.28) 0 2px,
+            transparent 2px 4px
+        );
+}
+
+
+/* Header dots */
+
+.header-dots,
+.header-dots-two {
+    position: absolute;
+
+    background-image:
+        radial-gradient(
+            rgba(255, 255, 255, 0.38) 1px,
+            transparent 1px
+        );
+}
+
+
+.header-dots {
+    left: 31%;
+    top: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    background-size: 8px 8px;
+}
+
+
+.header-dots-two {
+    left: 91%;
+    top: 17px;
+
+    width: 35px;
+    height: 35px;
+
+    background-size: 7px 7px;
+}
+
+
+/* Header travel route */
+
+.header-route {
+    position: absolute;
+
+    left: 29%;
+    top: -25px;
+
+    width: 850px;
+    height: 100px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 50%;
+
+    transform: rotate(-3deg);
+}
+
+
+.header-route-marker {
+    position: absolute;
+
+    left: 58%;
+    top: 11px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+}
+
+
+/* Common page container */
+
+.page-container {
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: calc(100vh - 72px);
+
+    margin: 0 auto;
+    padding: 24px 30px;
+}
+
+
+/* Payment page */
+
+.payment-container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: calc(100vh - 72px);
+
+    margin: 0 auto;
+    padding: 24px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Background decoration */
+
+.skybook-page-decoration {
+    position: fixed;
+
+    inset: 72px 0 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.skybook-page-decoration > div {
+    pointer-events: none;
+}
+
+
+.summary-page {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Tiles */
+
+.tile {
+    background-color: var(--secondary-color);
+
+    border-radius: 18px;
+    padding: 25px;
+
+    box-shadow:
+        0 6px 18px
+        var(--shadow-color);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    overflow: hidden;
+}
+
+
+.tile:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+.tile h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+
+/* Payment top row */
+
+.top-row {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    gap: 20px;
+    min-height: 190px;
+}
+
+
+/* Offers */
+
+.offers-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.offer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color:
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 10px;
+
+    padding: 10px 14px;
+    margin-bottom: 8px;
+}
+
+
+.offer-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.offer-item h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.offer-item p {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* Booking summary */
+
+.booking-summary-tile {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.booking-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    flex: 1;
+}
+
+
+.detail-item {
+    background-color:
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 10px;
+
+    padding: 12px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.detail-item span {
+    font-size: 12px;
+
+    color: var(--muted-text);
+
+    margin-bottom: 5px;
+}
+
+
+.detail-item strong {
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+
+/* Payment bottom row */
+
+.bottom-row {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    gap: 20px;
+
+    flex: 1;
+    min-height: 450px;
+}
+
+
+/* Payment options */
+
+.payment-options-tile {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-self: start;
+}
+
+
+.payment-option {
+    width: 100%;
+
+    background-color:
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 12px;
+
+    padding: 18px 20px;
+    margin-bottom: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.payment-option:hover {
+    transform: translateY(-3px);
+
+    background-color:
+        rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 7px 15px
+        rgba(37, 99, 235, 0.15);
+}
+
+
+.payment-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+
+    accent-color:
+        var(--primary-color);
+}
+
+
+.payment-option label {
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Dynamic payment form */
+
+.payment-form-tile {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 450px;
+}
+
+
+.payment-placeholder {
+    text-align: center;
+    max-width: 400px;
+}
+
+
+.payment-placeholder h2 {
+    margin-bottom: 12px;
+}
+
+
+.payment-placeholder p {
+    color: var(--muted-text);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* Payment form */
+
+.payment-form {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+.payment-form h2 {
+    margin-bottom: 25px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+
+    border:
+        2px solid
+        var(--border-color);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background-color: var(--white);
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color:
+        var(--primary-color);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.15);
+}
+
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* Form row */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* Fare summary */
+
+.fare-summary {
+    width: 100%;
+
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top:
+        2px solid
+        rgba(255, 255, 255, 0.5);
+}
+
+
+.fare-line {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+
+.fare-line.discount {
+    color:
+        var(--success-color);
+
+    font-weight: 600;
+}
+
+
+.fare-line.total {
+    margin-top: 15px;
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.6);
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* Buttons */
+
+.payment-button,
+.pdf-button,
+.dashboard-button {
+    border: none;
+    border-radius: 10px;
+
+    background-color:
+        var(--primary-color);
+
+    color:
+        var(--white);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.payment-button {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 20px;
+}
+
+
+.pdf-button,
+.dashboard-button {
+    width: 375px;
+    height: 50px;
+
+    margin: 20px 0 0;
+}
+
+
+.payment-button:hover,
+.pdf-button:hover,
+.dashboard-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(37, 99, 235, 0.35);
+
+    background-color:
+        #1D4ED8;
+}
+
+
+.payment-button:active,
+.pdf-button:active,
+.dashboard-button:active {
+    transform: translateY(0);
+}
+
+
+.pdf-section {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top:
+        2px solid
+        rgba(255, 255, 255, 0.55);
+
+    text-align: center;
+}
+
+
+.pdf-section p {
+    color:
+        var(--muted-text);
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.pdf-section .pdf-button,
+.pdf-section .dashboard-button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.pdf-section .dashboard-button {
+    margin-left: 6px;
+}
+
+
+/* Loading overlay */
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color:
+        rgba(255, 255, 255, 0.45);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9999;
+}
+
+
+.loading-overlay.active {
+    display: flex;
+}
+
+
+.loading-tile {
+    width: 350px;
+    min-height: 220px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background-color:
+        var(--secondary-color);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.airplane-loader {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+
+/* Booking summary page */
+
+.summary-page {
+    min-height:
+        calc(100vh - 72px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 25px 20px;
+}
+
+
+.summary-tile {
+    width: 100%;
+    max-width: 850px;
+
+    background-color:
+        var(--secondary-color);
+
+    border-radius: 20px;
+
+    padding: 25px 30px;
+
+    box-shadow:
+        0 10px 30px
+        var(--shadow-color);
+
+    text-align: left;
+}
+
+
+/* Summary header */
+
+.summary-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.summary-header h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+
+.summary-header p {
+    color:
+        var(--muted-text);
+
+    font-size: 15px;
+}
+
+
+.booking-success {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    background-color:
+        rgba(255, 255, 255, 0.45);
+
+    color:
+        var(--success-color);
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* Summary sections */
+
+.summary-section {
+    margin-top: 18px;
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.55);
+}
+
+
+.summary-section:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+
+    border-top: none;
+}
+
+
+.summary-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+/* Summary grid */
+
+.summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+/* Passenger list */
+
+.passenger-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.passenger-row {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 0.7fr;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 10px 15px;
+
+    background-color:
+        rgba(255, 255, 255, 0.35);
+
+    border-radius: 10px;
+}
+
+
+.passenger-row span {
+    color:
+        var(--muted-text);
+
+    font-size: 12px;
+
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+
+.passenger-row strong {
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+
+/* Payment summary */
+
+.payment-summary {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.payment-summary-line {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 15px;
+}
+
+
+.payment-summary-line.discount {
+    color:
+        var(--success-color);
+
+    font-weight: 600;
+}
+
+
+.payment-summary-line.total {
+    margin-top: 8px;
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.6);
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* Payment status */
+
+.payment-status {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    background-color:
+        rgba(255, 255, 255, 0.45);
+
+    color:
+        var(--success-color);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* Payment page decoration */
+
+.skybook-decoration-card {
+    position: absolute;
+
+    width: 190px;
+    height: 115px;
+
+    border:
+        2px solid
+        rgba(40, 100, 232, 0.28);
+
+    border-radius: 14px;
+
+    transform: rotate(-7deg);
+}
+
+
+.skybook-decoration-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 28px;
+
+    width: 100%;
+
+    border-top:
+        2px solid
+        rgba(40, 100, 232, 0.20);
+}
+
+
+.skybook-decoration-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+    bottom: 16px;
+
+    width: 38px;
+    height: 12px;
+
+    border:
+        1px solid
+        rgba(40, 100, 232, 0.22);
+
+    border-radius: 3px;
+}
+
+
+.skybook-decoration-card-two {
+    position: absolute;
+
+    width: 145px;
+    height: 88px;
+
+    border:
+        1px solid
+        rgba(40, 100, 232, 0.20);
+
+    border-radius: 11px;
+
+    transform: rotate(8deg);
+}
+
+
+.skybook-decoration-qr {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    opacity: 0.30;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2864E8 10%,
+            transparent 10% 20%,
+            #2864E8 20% 30%,
+            transparent 30% 45%,
+            #2864E8 45% 55%,
+            transparent 55% 70%,
+            #2864E8 70% 80%,
+            transparent 80%
+        );
+
+    border:
+        5px solid
+        rgba(40, 100, 232, 0.10);
+}
+
+
+.skybook-decoration-qr::before,
+.skybook-decoration-qr::after {
+    content: "";
+
+    position: absolute;
+
+    border:
+        5px solid
+        #2864E8;
+}
+
+
+.skybook-decoration-qr::before {
+    width: 18px;
+    height: 18px;
+
+    left: 5px;
+    top: 5px;
+}
+
+
+.skybook-decoration-qr::after {
+    width: 18px;
+    height: 18px;
+
+    right: 5px;
+    bottom: 5px;
+}
+
+
+.skybook-decoration-rupee {
+    position: absolute;
+
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        2px solid
+        rgba(40, 100, 232, 0.25);
+
+    border-radius: 50%;
+
+    color:
+        rgba(40, 100, 232, 0.38);
+
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+.skybook-decoration-check {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        2px solid
+        rgba(40, 100, 232, 0.24);
+
+    border-radius: 50%;
+
+    color:
+        rgba(40, 100, 232, 0.34);
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.skybook-decoration-pass {
+    position: absolute;
+
+    width: 220px;
+    height: 92px;
+
+    border:
+        2px dashed
+        rgba(40, 100, 232, 0.25);
+
+    border-radius: 9px;
+
+    transform: rotate(-4deg);
+}
+
+
+.skybook-decoration-pass::before {
+    content: "BOARDING PASS";
+
+    position: absolute;
+
+    left: 15px;
+    top: 13px;
+
+    color:
+        rgba(40, 100, 232, 0.32);
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.skybook-decoration-pass::after {
+    content: "";
+
+    position: absolute;
+
+    right: 16px;
+    top: 14px;
+
+    width: 55px;
+    height: 45px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(40, 100, 232, 0.24) 0 2px,
+            transparent 2px 5px
+        );
+}
+
+
+.skybook-decoration-wallet {
+    position: absolute;
+
+    width: 95px;
+    height: 65px;
+
+    border:
+        2px solid
+        rgba(40, 100, 232, 0.23);
+
+    border-radius: 9px;
+}
+
+
+.skybook-decoration-wallet::before {
+    content: "";
+
+    position: absolute;
+
+    right: -5px;
+    top: 19px;
+
+    width: 35px;
+    height: 25px;
+
+    border:
+        2px solid
+        rgba(40, 100, 232, 0.22);
+
+    border-radius: 5px;
+
+    background: #F5F9FF;
+}
+
+
+.skybook-decoration-wallet::after {
+    content: "";
+
+    position: absolute;
+
+    right: 7px;
+    top: 28px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(40, 100, 232, 0.30);
+}
+
+
+.skybook-decoration-contactless {
+    position: absolute;
+
+    width: 42px;
+    height: 42px;
+}
+
+
+.skybook-decoration-contactless::before,
+.skybook-decoration-contactless::after {
+    content: "";
+
+    position: absolute;
+
+    border-right:
+        3px solid
+        rgba(40, 100, 232, 0.28);
+
+    border-radius: 50%;
+
+    transform: rotate(-35deg);
+}
+
+
+.skybook-decoration-contactless::before {
+    width: 16px;
+    height: 30px;
+
+    left: 5px;
+    top: 6px;
+}
+
+
+.skybook-decoration-contactless::after {
+    width: 27px;
+    height: 42px;
+
+    left: 4px;
+    top: 0;
+}
+
+
+.skybook-decoration-chip {
+    position: absolute;
+
+    width: 32px;
+    height: 25px;
+
+    border:
+        2px solid
+        rgba(40, 100, 232, 0.24);
+
+    border-radius: 5px;
+}
+
+
+.skybook-decoration-chip::before {
+    content: "";
+
+    position: absolute;
+
+    left: 6px;
+    top: 5px;
+
+    width: 15px;
+    height: 11px;
+
+    border:
+        1px solid
+        rgba(40, 100, 232, 0.24);
+
+    border-radius: 2px;
+}
+
+
+.skybook-decoration-dots {
+    position: absolute;
+
+    width: 65px;
+    height: 55px;
+
+    opacity: 0.42;
+
+    background-image:
+        radial-gradient(
+            #2864E8 1px,
+            transparent 1px
+        );
+
+    background-size: 9px 9px;
+}
+
+
+/* Payment page decoration positions */
+
+.payment-page-decoration .skybook-decoration-card {
+    left: 4%;
+    top: 90px;
+}
+
+
+.payment-page-decoration .skybook-decoration-card-two {
+    left: 12%;
+    top: 125px;
+}
+
+
+.payment-page-decoration .skybook-decoration-qr {
+    left: 25%;
+    top: 90px;
+}
+
+
+.payment-page-decoration .skybook-decoration-rupee {
+    left: 7%;
+    bottom: 90px;
+}
+
+
+.payment-page-decoration .skybook-decoration-check {
+    left: 24%;
+    bottom: 105px;
+}
+
+
+.payment-page-decoration .skybook-decoration-pass {
+    right: 6%;
+    bottom: 85px;
+}
+
+
+.payment-page-decoration .skybook-decoration-wallet {
+    right: 30%;
+    bottom: 75px;
+}
+
+
+.payment-page-decoration .skybook-decoration-contactless {
+    right: 19%;
+    top: 105px;
+}
+
+
+.payment-page-decoration .skybook-decoration-chip {
+    right: 8%;
+    top: 255px;
+}
+
+
+.payment-page-decoration .skybook-decoration-dots {
+    right: 4%;
+    top: 155px;
+}
+
+
+/* Booking summary decoration positions */
+
+.summary-page-decoration .skybook-decoration-card {
+    left: 4%;
+    top: 100px;
+}
+
+
+.summary-page-decoration .skybook-decoration-card-two {
+    left: 12%;
+    top: 135px;
+}
+
+
+.summary-page-decoration .skybook-decoration-qr {
+    left: 22%;
+    top: 105px;
+}
+
+
+.summary-page-decoration .skybook-decoration-rupee {
+    left: 7%;
+    bottom: 100px;
+}
+
+
+.summary-page-decoration .skybook-decoration-check {
+    left: 24%;
+    bottom: 115px;
+}
+
+
+.summary-page-decoration .skybook-decoration-pass {
+    right: 5%;
+    bottom: 95px;
+}
+
+
+.summary-page-decoration .skybook-decoration-wallet {
+    right: 27%;
+    bottom: 85px;
+}
+
+
+.summary-page-decoration .skybook-decoration-contactless {
+    right: 18%;
+    top: 115px;
+}
+
+
+.summary-page-decoration .skybook-decoration-chip {
+    right: 7%;
+    top: 270px;
+}
+
+
+.summary-page-decoration .skybook-decoration-dots {
+    right: 3%;
+    top: 165px;
+}
+
+
+/* Responsive layout */
+
+@media (max-width: 1100px) {
+
+    .payment-container {
+        padding: 20px;
+    }
+
+
+    .page-container {
+        padding: 20px;
+    }
+
+
+    .booking-details {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .bottom-row {
+        min-height: 430px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .header-card {
+        left: 35%;
+    }
+
+
+    .header-card-two {
+        left: 47%;
+    }
+
+
+    .header-rupee {
+        left: 58%;
+    }
+
+
+    .header-qr {
+        left: 70%;
+    }
+
+
+    .header-contactless {
+        left: 82%;
+    }
+
+
+    .header-chip,
+    .header-pass,
+    .header-dots-two {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .skybook-page-decoration {
+        opacity: 0.75;
+    }
+
+
+    .skybook-decoration-card {
+        left: 2% !important;
+
+        transform:
+            scale(0.75)
+            rotate(-7deg);
+    }
+
+
+    .skybook-decoration-card-two {
+        display: none;
+    }
+
+
+    .skybook-decoration-qr {
+        left: 27% !important;
+        transform: scale(0.75);
+    }
+
+
+    .skybook-decoration-pass {
+        right: 1% !important;
+
+        transform:
+            scale(0.75)
+            rotate(-4deg);
+    }
+
+
+    .skybook-decoration-wallet {
+        right: 25% !important;
+        transform: scale(0.75);
+    }
+
+
+    .payment-container {
+        min-height: auto;
+    }
+
+
+    .top-row,
+    .bottom-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .bottom-row {
+        min-height: auto;
+    }
+
+
+    .payment-form-tile {
+        min-height: 500px;
+    }
+
+
+    .summary-page {
+        padding: 30px 18px;
+    }
+
+
+    .summary-tile {
+        padding: 25px;
+    }
+
+
+    .summary-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header-card,
+    .header-card-two,
+    .header-qr,
+    .header-chip,
+    .header-pass,
+    .header-contactless,
+    .header-route,
+    .header-route-marker,
+    .header-dots-two {
+        display: none;
+    }
+
+
+    .header-rupee {
+        left: 65%;
+    }
+
+
+    .header-dots {
+        left: 45%;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .skybook-page-decoration {
+        opacity: 0.55;
+    }
+
+
+    .skybook-decoration-card,
+    .skybook-decoration-card-two,
+    .skybook-decoration-qr,
+    .skybook-decoration-pass,
+    .skybook-decoration-wallet {
+        transform: scale(0.55);
+    }
+
+
+    .skybook-decoration-card {
+        left: -35px !important;
+        top: 45px !important;
+    }
+
+
+    .skybook-decoration-qr {
+        left: 10px !important;
+        top: 170px !important;
+    }
+
+
+    .skybook-decoration-rupee {
+        left: 10px !important;
+        bottom: 35px !important;
+
+        transform: scale(0.70);
+    }
+
+
+    .skybook-decoration-check {
+        display: none;
+    }
+
+
+    .skybook-decoration-pass {
+        right: -45px !important;
+        bottom: 45px !important;
+    }
+
+
+    .skybook-decoration-wallet {
+        right: 5px !important;
+        bottom: 150px !important;
+    }
+
+
+    .skybook-decoration-contactless,
+    .skybook-decoration-chip,
+    .skybook-decoration-dots {
+        display: none;
+    }
+
+
+    .skybook-header {
+        height: 60px;
+        padding: 0 20px;
+    }
+
+
+    .skybook-header > .skybook-logo {
+        width: 90px;
+        height: 42px;
+
+        max-width: 90px;
+        max-height: 42px;
+
+        flex-basis: 90px;
+    }
+
+
+    .payment-container,
+    .page-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+
+    .tile {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+
+    .booking-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .payment-form-tile {
+        min-height: 550px;
+    }
+
+
+    .summary-page {
+        padding: 20px 12px;
+    }
+
+
+    .summary-tile {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+
+    .summary-header h1 {
+        font-size: 24px;
+    }
+
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .passenger-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .payment-summary-line {
+        font-size: 14px;
+    }
+
+
+    .pdf-button,
+    .dashboard-button {
+        width: 100%;
+    }
+
+
+    .pdf-section .dashboard-button {
+        margin-left: 0;
+    }
+
+}

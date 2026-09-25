@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SkyBook - Booking Summary</title>
+
+    <link rel="stylesheet" href="design.css">
+
+</head>
+
+
+<body>
+
+    <header class="skybook-header">
+
+        <img
+            src="skybook-logo-small.png"
+            alt="SkyBook"
+            class="skybook-logo">
+
+
+        <!-- Header decoration -->
+
+        <div
+            class="skybook-header-decoration"
+            aria-hidden="true">
+
+            <span class="header-card"></span>
+
+            <span class="header-card-two"></span>
+
+            <span class="header-rupee">
+                ₹
+            </span>
+
+            <span class="header-qr"></span>
+
+            <span class="header-contactless">
+                )))
+            </span>
+
+            <span class="header-chip"></span>
+
+            <span class="header-pass"></span>
+
+            <span class="header-dots"></span>
+
+            <span class="header-dots-two"></span>
+
+            <span class="header-route"></span>
+
+            <span class="header-route-marker"></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Decorative elements for the summary page -->
+
+    <div
+        class="skybook-page-decoration summary-page-decoration"
+        aria-hidden="true">
+
+        <div class="skybook-decoration-card"></div>
+
+        <div class="skybook-decoration-card-two"></div>
+
+        <div class="skybook-decoration-qr"></div>
+
+        <div class="skybook-decoration-rupee">
+            ₹
+        </div>
+
+        <div class="skybook-decoration-check">
+            ✓
+        </div>
+
+        <div class="skybook-decoration-pass"></div>
+
+        <div class="skybook-decoration-wallet"></div>
+
+        <div class="skybook-decoration-contactless"></div>
+
+        <div class="skybook-decoration-chip"></div>
+
+        <div class="skybook-decoration-dots"></div>
+
+    </div>
+
+
+    <main class="summary-page">
+
+        <section class="summary-tile">
+
+            <div class="summary-header">
+
+                <h1>
+                    Booking Confirmed
+                </h1>
+
+                <p>
+                    Your SkyBook flight has been successfully booked.
+                </p>
+
+                <span class="booking-success">
+                    ✓ PAYMENT SUCCESSFUL
+                </span>
+
+            </div>
+
+
+            <div class="summary-section">
+
+                <h2>
+                    Booking Details
+                </h2>
+
+
+                <div class="summary-grid">
+
+                    <div class="detail-item">
+
+                        <span>
+                            PNR
+                        </span>
+
+                        <strong id="pnr">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Flight
+                        </span>
+
+                        <strong id="flightNumber">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Airline
+                        </span>
+
+                        <strong id="airline">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            From
+                        </span>
+
+                        <strong id="from">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            To
+                        </span>
+
+                        <strong id="to">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            Departure
+                        </span>
+
+                        <strong id="departure">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-section">
+
+                <h2>
+                    Passengers
+                </h2>
+
+
+                <div
+                    id="passengerList"
+                    class="passenger-list">
+
+                    <p>
+                        Loading passenger details...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-section">
+
+                <h2>
+                    Payment Details
+                </h2>
+
+
+                <div class="payment-summary">
+
+                    <div class="payment-summary-line">
+
+                        <span>
+                            Original Amount
+                        </span>
+
+                        <strong id="originalAmount">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="payment-summary-line discount">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <strong id="discountAmount">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="payment-summary-line">
+
+                        <span>
+                            Payment Method
+                        </span>
+
+                        <strong id="paymentMethod">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+
+                    <div class="payment-summary-line">
+
+                        <span>
+                            Payment Status
+                        </span>
+
+                        <strong>
+
+                            <span
+                                id="paymentStatus"
+                                class="payment-status">
+
+                                Loading...
+
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="payment-summary-line total">
+
+                        <span>
+                            Amount Paid
+                        </span>
+
+                        <strong id="amountPaid">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="pdf-section">
+
+                <p>
+                    Download your booking confirmation
+                    for your records.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="pdf-button"
+                    onclick="downloadBookingPDF()">
+
+                    Download PDF
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="dashboard-button"
+                    onclick="goToDashboard()">
+
+                    Go to Dashboard
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+
+
+    <script src="booking-summary.js"></script>
+
+</body>
+
+</html>
