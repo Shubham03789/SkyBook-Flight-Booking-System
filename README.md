@@ -2,28 +2,35 @@
 
 ## Project Overview
 
-SkyBook is a Java-based flight booking and reservation system developed as a collaborative academic project.
+SkyBook is a Java-based flight booking and reservation web application developed as a collaborative academic project.
 
-The system provides functionality for managing flight bookings, passenger information, payments, PNR generation, and ticket generation through a desktop-based Java application.
+The system provides functionality for flight booking, passenger and booking management, payment processing, seat booking, PNR generation, and ticket information retrieval.
 
 ## Features
 
 - Flight booking and reservation
-- Passenger and booking details management
+- Passenger and booking information management
+- Seat selection and availability management
 - Payment processing
+- Payment method selection
+- Discount calculation
 - PNR generation
-- Ticket generation
-- MySQL database integration
+- Ticket information generation and retrieval
 - Booking confirmation
-- User-friendly desktop interface
+- MySQL database integration
 
 ## Technologies Used
 
-- Java
-- Java Swing / GUI
-- NetBeans IDE
+- Java 17
+- Jakarta EE
+- Java Servlets
+- Maven
 - MySQL
 - JDBC
+- HTML
+- CSS
+- JavaScript
+- NetBeans IDE
 
 ## My Contribution
 
@@ -31,52 +38,50 @@ I developed the following modules as part of the project:
 
 ### 1. Payment Module
 
-The Payment Module handles the payment-related functionality of the booking process.
+The Payment Module handles the payment stage of the flight booking process.
 
 Key responsibilities include:
 
-- Processing booking payments
-- Managing payment details
-- Connecting payment information with the booking
-- Providing payment confirmation
+- Processing payment requests
+- Supporting debit card, credit card, and UPI payment methods
+- Calculating applicable discounts
+- Calculating the final amount to be paid
+- Recording payment information in the database
+- Updating booking status after successful payment
+- Updating seat availability after payment
+- Validating payment and booking information
 
 ### 2. PNR & Ticket Module
 
-The PNR & Ticket Module handles the generation and management of booking confirmation details.
+The PNR & Ticket Module handles booking confirmation information and ticket-related details.
 
 Key responsibilities include:
 
-- Generating PNR details
-- Generating flight tickets
-- Displaying booking and passenger information
-- Providing ticket details after successful booking and payment
+- Generating PNR information
+- Retrieving booking details
+- Retrieving passenger and flight information
+- Retrieving seat information
+- Retrieving payment details
+- Providing ticket and booking status information
+- Displaying the generated booking and ticket information
 
 ## Database
 
-The application uses **MySQL** for storing and retrieving application data.
+The application uses **MySQL** for storing and retrieving flight booking, passenger, payment, seat, and ticket-related information.
 
 Database connectivity is implemented using **JDBC**.
 
-> Database credentials and sensitive configuration details are not included in this repository.
+Database credentials and other sensitive configuration details are not included in this repository.
 
 ## Project Structure
 
-The project is organized into different modules responsible for various parts of the flight booking workflow.
-
-The Payment and PNR & Ticket modules were developed as my contribution to the project, while the complete system was developed collaboratively.
-
-## How to Run
-
-1. Install Java JDK.
-2. Install NetBeans IDE.
-3. Install MySQL.
-4. Open the project in NetBeans.
-5. Configure the required MySQL database.
-6. Update the database connection configuration if required.
-7. Build and run the project.
-
-## Project Type
-
-**Academic / Collaborative Java Project**
-
-SkyBook was developed as part of an academic project to gain practical experience in Java application development, GUI programming, database connectivity, and implementing real-world booking system functionality.
+```text
+SkyBook/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   ├── resources/
+│   │   └── webapp/
+│   └── test/
+├── pom.xml
+└── nb-configuration.xml
