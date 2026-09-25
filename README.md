@@ -56,7 +56,6 @@ Key responsibilities include:
 The PNR & Ticket Module handles booking confirmation information and ticket-related details.
 
 Key responsibilities include:
-
 - Generating PNR information
 - Retrieving booking details
 - Retrieving passenger and flight information
@@ -64,6 +63,7 @@ Key responsibilities include:
 - Retrieving payment details
 - Providing ticket and booking status information
 - Displaying the generated booking and ticket information
+- Generating and downloading the ticket as a PDF
 
 ## Database
 
